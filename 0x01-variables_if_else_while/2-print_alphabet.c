@@ -1,14 +1,17 @@
-#include <stdio.h>
-#include <ctype.h>
 
+#include <stdio.h>
+/**
+ * main - entry point
+ *
+ * Return: alway returns 0
+ *
+ */
 int main(void)
 {
-int l = 'a';
-while (l <= 'z')
-{
-putchar(l);
-l += 1;
-}
-putchar('\n');
-return (0);
+	char a;
+
+	for (a = 'a'; a <= 'z' ; a++)
+		putchar(a);
+	putchar('\n');
+	return (0);
 }
