@@ -1,16 +1,36 @@
 #include <stdio.h>
-#include <unistd.h>
-
 /**
- *main-This is the main fuction description
+ * main - entry point
  *
- *Return: 1 for succesful exit
+ * Return: alway returns 0
+ *
  */
-
 int main(void)
 {
-	write(2,
-		"and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 59);
-	return (1);
-}
+	int i;
+	int j;
+	int k;
 
+	for (i = 0; i <= 9; i++)
+	{
+		for (j = 0; j <= 9; j++)
+		{
+			for (k = 0; k <= 9; k++)
+			{
+				if (k > j && j > i)
+				{
+					putchar(i + '0');
+					putchar(j + '0');
+					putchar(k + '0');
+					if (i != 7 || j != 8 || k != 9)
+					{
+						putchar(',');
+						putchar(' ');
+					}
+				}
+			}
+		}
+	}
+	putchar('\n');
+	return (0);
+}
